@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Employee Polls Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+1. [Overview](#overview)
+1. [App Features](#app-features)
+1. [Technologies Used](#technologies-used)
+1. [Local Setup and Installation](#local-setup-and-installation)
+1. [Future Work](#future-work)
+1. [Author](#author)
 
-## Available Scripts
+## Overview
+_This project is a part of the Udacity Senior Frontend Engineer - OLX Scholarship Nanodegree._ The aim of this project is to build an application that employees of any company can use internally to create polls with two proposed solutions. Employees can then vote on these solutions and see which solutions have the most votes. In addition, there is a dashboard that lists every employee ordered by the number of polls they've created and answered.
 
-In the project directory, you can run:
+## App Features
+The app has the following features:
+- Main home page with categorization of polls as ***answered*** or ***unanswered***
+  ![Screenshot Home Page](https://user-images.githubusercontent.com/51514137/212646785-9fe3ff77-253f-4796-9bd8-abc7c9e5673b.png)
+- View Polls by Clicking on question from Home Page
+  ![Screenshot Question Page](https://user-images.githubusercontent.com/51514137/212647025-8704ab78-884a-4380-bb8b-bc8cc3de8805.png)
+- Leaderboard page with users sorted by number of polls created and answered
+  ![Screenshot of Leaderboard Page](https://user-images.githubusercontent.com/51514137/212647147-b30e5759-a325-45d8-8740-48fa6402c261.png)
+- Add Polls using forms that allows users to create a new poll by entering the two options 
+  ![Screenshot Add Poll Page](https://user-images.githubusercontent.com/51514137/212647766-756d41c6-ef9c-4d05-8b95-df335e3f1d68.png)
 
-### `npm start`
+ 
+## Technologies Used
+- Tailwind CSS
+- React
+- React Router DOM v6
+- Redux
+- Jest
+- React Testing Library
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Local Setup and Installation
+1. To setup this project locally in your system, (optionally fork and then) clone this project by running the following command in your terminal:
+    ```
+    git clone https://github.com/bharati-21/employee-polls-sfe-nd.git
+    ```
+1. To install dependencies, run the following commands in your terminal:
+    ```
+    cd employee-polls-sfe-nd
+    cd starter
+    npm install
+    ```
+1. To launch the project development server, run the following command:
+    ```
+    npm start
+    ```
+## Future Work
+- Signup feature along with create new users
+- End dates on polls to close them
+- Filtering questions based on users
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<hr />
 
-### `npm test`
+## Author
+  - <a href="https://bharati-21.github.io/">👩‍💻 Bharati Subramanian</a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Check out author's social links 
+> [GitHub Profile](https://github.com/bharati-21) &nbsp;&middot;&nbsp; 
+> [LinkedIn Profile](https://www.linkedin.com/in/bharati-subramanian-29734b152/) &nbsp;&middot;&nbsp;
+> [Twitter Profile](https://twitter.com/_bhaaratii) &nbsp;&middot;&nbsp;
+> [Dev.to Blogs](https://dev.to/bharati21) &nbsp;&middot;&nbsp;
+> [Hashnode Blogs](https://bharati.hashnode.dev/) &nbsp;&middot;&nbsp;
 
-### `npm run build`
+<hr />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">Copyright &copy; 2022 
+  <br />
+  <a href="https://bharati-21.github.io/">👩‍💻 Bharati Subramanian</a>
+</p>
