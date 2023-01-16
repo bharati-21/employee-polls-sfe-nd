@@ -64,7 +64,7 @@ const Login = () => {
 					<div>
 						<input
 							type="submit"
-							className="group relative flex w-full justify-center rounded border border-transparent bg-indigo-600 py-2 px-4 font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 cursor-pointer text-md"
+							className="btn-primary-full p-2 text-base"
 							value="Sign in as Guest"
 						/>
 					</div>
