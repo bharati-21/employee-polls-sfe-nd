@@ -102,8 +102,16 @@ const Question = () => {
 		}
 	};
 
+	const hasAuthorAnswered = isAuthorAnswered(1) || isAuthorAnswered(2);
 	const isLoading = !isValidQuestion || !questions.length || !users.length;
-	const btnDisabled = loading || isAuthorAnswered(1) || isAuthorAnswered(2);
+	const btnDisabled = loading || hasAuthorAnswered;
+
+	const optionOneAnswered = votesOne.length;
+	const optionTwoAnswered = votesTwo.length;
+	const optionOnePercentage =
+		users.length && (optionOneAnswered / users.length) * 100;
+	const optionTwoPercentage =
+		users.length && (optionTwoAnswered / users.length) * 100;
 
 	return isLoading ? null : (
 		<div className="min-h-[90vh] h-full mx-auto p-8 max-w-6xl w-full justify-center items-center flex flex-col">
@@ -112,11 +120,11 @@ const Question = () => {
 				src={avatarURL}
 				alt={`${authedUser} avatar`}
 			/>
-			<div className="question-wrapper p-1 flex flex-wrap gap-8 justify-center">
+			<div className="question-wrapper p-1 flex flex-wrap gap-4 mt-5 justify-center">
 				<h1 className="text-xl mt-5">Would you rather</h1>
 				<div className="question-options-container flex flex-wrap gap-2 w-full">
 					<div className="option-one flex flex-col flex-1 justify-between">
-						<span className="border-gray-300 border-2 border-b-0 py-1.5 flex-1">
+						<span className="border-gray-300 border-2 border-b-0 p-1.5 flex-1">
 							{textOne}
 						</span>
 						<button
@@ -129,11 +137,18 @@ const Question = () => {
 							value={1}
 							onClick={handleVoteQuestion}
 						>
-							Vote
+							{hasAuthorAnswered ? (
+								<div className="flex gap-2 flex-wrap justify-between">
+									<span>{optionOneAnswered}</span>
+									<span>{optionOnePercentage}%</span>
+								</div>
+							) : (
+								"Vote"
+							)}
 						</button>
 					</div>
 					<div className="option-two flex flex-col flex-1 justify-between">
-						<span className="border-gray-300 border-2 border-b-0 py-1.5 flex-1">
+						<span className="border-gray-300 border-2 border-b-0 p-1.5 flex-1">
 							{textTwo}
 						</span>
 						<button
@@ -146,7 +161,14 @@ const Question = () => {
 							value={2}
 							onClick={handleVoteQuestion}
 						>
-							Vote
+							{hasAuthorAnswered ? (
+								<div className="flex gap-2 flex-wrap justify-between">
+									<span>{optionTwoAnswered}</span>
+									<span>{optionTwoPercentage}%</span>
+								</div>
+							) : (
+								"Vote"
+							)}
 						</button>
 					</div>
 				</div>
