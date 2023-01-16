@@ -42,15 +42,15 @@
 		@apply text-slate-900 hover:text-yellow-500 inline-block text-sm;
 	}
 
-    .btn-icon {
-        @apply bg-none text-lg hover:text-yellow-600;
-    }
-
-    .btn-voted {
-        @apply rounded-sm p-2 text-center text-gray-100 bg-green-600 hover:bg-green-700 transition-all ease-in font-medium text-sm;
+	.btn-icon {
+		@apply bg-none text-lg hover:text-yellow-600;
 	}
 
-    button:disabled {
-        @apply opacity-70 cursor-not-allowed pointer-events-none;
-    }
+	.btn-voted {
+		@apply rounded-sm p-2 text-center text-gray-100 bg-green-600 hover:bg-green-700 transition-all ease-in font-medium text-sm;
+	}
+
+	button:disabled {
+		@apply opacity-70 cursor-not-allowed pointer-events-none;
+	}
 }
