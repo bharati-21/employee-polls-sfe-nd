@@ -73,6 +73,7 @@ const AddPoll = () => {
 							placeholder="Option one"
 							name="optionOneText"
 							required
+							data-testid="input-option-one-text"
 							value={optionOneText}
 							onChange={handleOptionChange}
 						/>
@@ -83,6 +84,7 @@ const AddPoll = () => {
 							type="text"
 							className="form-control border rounded-sm border-slate-400 text-sm p-1.5"
 							placeholder="Option two"
+							data-testid="input-option-two-text"
 							required
 							value={optionTwoText}
 							name="optionTwoText"
