@@ -1,3 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	html {
+		font-family: "Poppins", sans-serif;
+		box-sizing: border-box;
+	}
+
+	*,
+	*::after,
+	*::before {
+		box-sizing: inherit;
+	}
+}
+
+@layer components {
+	.btn-primary {
+		@apply rounded-sm p-2 text-center text-slate-800 bg-yellow-500 hover:bg-yellow-600 transition-all ease-in font-medium text-sm;
+	}
+
+	.btn-primary-full {
+		@apply w-full inline-block py-1.5 px-2 rounded-sm font-medium text-slate-900 bg-yellow-500 hover:bg-yellow-600 transition-all ease-in cursor-pointer text-sm;
+	}
+
+	.btn-primary-full-outline {
+		@apply w-full border text-slate-900 border-yellow-500 inline-block py-1.5 px-2 rounded-sm font-medium hover:text-yellow-500 transition-all ease-in cursor-pointer text-sm;
+	}
+
+	.btn-primary-link {
+		@apply w-full text-center hover:text-yellow-500 transition-all ease-in cursor-pointer text-sm;
+	}
+
+	.active-link {
+		@apply inline-block text-yellow-500 hover:text-yellow-600 text-sm;
+	}
+
+	.link {
+		@apply text-slate-900 hover:text-yellow-500 inline-block text-sm;
+	}
+
+    .btn-icon {
+        @apply bg-none text-lg hover:text-yellow-600;
+    }
+
+    .btn-voted {
+        @apply rounded-sm p-2 text-center text-gray-100 bg-green-600 hover:bg-green-700 transition-all ease-in font-medium text-sm;
+	}
+
+    button:disabled {
+        @apply opacity-70 cursor-not-allowed pointer-events-none;
+    }
+}
