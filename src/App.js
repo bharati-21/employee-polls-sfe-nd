@@ -28,6 +28,7 @@ const App = () => {
 			<LoadingBar
 				style={{
 					zIndex: 20,
+					backgroundColor: "rgb(234 179 8)",
 				}}
 			/>
 			<NavRoutes />
