@@ -46,6 +46,11 @@ The app has the following features:
     ```
     npm start
     ```
+1. To run tests, use the following command:
+    ```
+    npm test
+    ```
+    
 ## Future Work
 - Signup feature along with create new users
 - End dates on polls to close them
