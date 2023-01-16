@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import LoadingBar from "react-redux-loading-bar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { useInitData } from "./hooks/useInitData";
+import NavRoutes from "./Routes/NavRoutes";
+
+const App = () => {
+	const { initData, clearState } = useInitData();
+	const { authedUser } = useSelector((state) => state);
+	useEffect(() => {
+		if (authedUser) {
+			try {
+				initData();
+			} catch (error) {
+				console.warn(error);
+				alert(
+					"Error occured while initializing App. Please try again."
+				);
+			}
+		} else {
+			clearState();
+		}
+	}, [initData, authedUser, clearState]);
+
+	return (
+		<div className="App">
+			<LoadingBar
+				style={{
+					zIndex: 20,
+				}}
+			/>
+			<NavRoutes />
+		</div>
+	);
+};
 
 export default App;
