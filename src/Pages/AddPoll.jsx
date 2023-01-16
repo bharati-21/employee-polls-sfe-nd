@@ -57,7 +57,7 @@ const AddPoll = () => {
 	const { optionOneText, optionTwoText } = options;
 
 	return (
-		<div className="min-h-[80vh] h-full max-w-6xl mx-auto p-8 w-full gap-6 flex flex-col items-center justify-center">
+		<div className="min-h-[80vh] h-full max-w-6xl mx-auto p-8 w-full gap-6 flex flex-col items-center justify-center text-center">
 			<h2 className="text-3xl">Create your own Poll</h2>
 			<div className="poll-form flex flex-col gap-4 mt-2 w-full max-w-[500px]">
 				<h3 className="mb-4 text-xl">Would you rather</h3>
