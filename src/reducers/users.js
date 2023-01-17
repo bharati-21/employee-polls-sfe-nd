@@ -11,7 +11,7 @@ const users = (state = [], action) => {
 			return action.users;
 		case CLEAR_USERS:
 			return action.users;
-		case UPDATE_ANSWERED: {
+		case UPDATE_CREATED_QUESTIONS: {
 			const { questionId, authedUser } = action.info;
 			return state.map((user) =>
 				user.id === authedUser
@@ -22,7 +22,7 @@ const users = (state = [], action) => {
 					: user
 			);
 		}
-		case UPDATE_CREATED_QUESTIONS: {
+		case UPDATE_ANSWERED: {
 			const { questionId, authedUser } = action.info;
 			return state.map((user) =>
 				user.id === authedUser
