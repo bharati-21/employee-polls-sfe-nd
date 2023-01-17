@@ -16,7 +16,7 @@ const NavRoutes = () => {
 			<Route path="/" element={<ProtectedRoutes />}>
 				<Route path="/" element={<Home />} />
 				<Route path="/leaderboard" element={<LeaderBoard />} />
-				<Route path="/question/:questionId" element={<Question />} />
+				<Route path="/questions/:questionId" element={<Question />} />
 				<Route path="/add" element={<AddPoll />} />
 				<Route path="*" element={<NotFound />} />
 				<Route path="/error" element={<NotFound />} />

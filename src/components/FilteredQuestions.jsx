@@ -21,7 +21,7 @@ const FilteredQuestions = ({ filteredQuestions }) => {
 								new Date(timestamp).toLocaleDateString()}
 						</p>
 						<Link
-							to={`/question/${id}`}
+							to={`/questions/${id}`}
 							className="mt-4 btn-primary-full text-xs font-semibold"
 						>
 							View Poll
