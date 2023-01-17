@@ -44,7 +44,6 @@ const Login = () => {
 	};
 
 	const { userId = "", password = "" } = user;
-	console.log(userId, password);
 
 	return (
 		<div className="flex h-screen items-center justify-center py-1-5 px-4 sm:px-6 lg:px-8">
