@@ -1,4 +1,4 @@
-const TableBody = ({ users = [] }) => {
+const TableBody = ({ users = [], authedUser = "" }) => {
 	return (
 		<tbody>
 			{users.map(
@@ -18,7 +18,7 @@ const TableBody = ({ users = [] }) => {
 						>
 							<th
 								scope="row"
-								className="flex items-center p-4 text-gray-900 whitespace-nowrap dark:text-white min-w-[250px] w-full"
+								className="flex items-center p-4 whitespace-nowrap text-white min-w-[250px] w-full"
 							>
 								<img
 									className="w-10 h-10 rounded-full object-cover flex-shrink-0"
@@ -26,7 +26,13 @@ const TableBody = ({ users = [] }) => {
 									alt={name + "avatar"}
 								/>
 								<div className="pl-3 user-name-id">
-									<div className="text-base font-semibold whitespace-pre-line">
+									<div
+										className={`text-base font-semibold whitespace-pre-line ${
+											id === authedUser
+												? "text-yellow-500"
+												: "text-white"
+										}`}
+									>
 										{name}
 									</div>
 									<div className="font-normal text-gray-500 whitespace-pre-line">

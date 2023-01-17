@@ -19,7 +19,11 @@ const TABLE_HEADINGS = [
 ];
 
 const LeaderBoard = () => {
-	const { users = [], questions = [] } = useSelector((state) => state);
+	const {
+		users = [],
+		questions = [],
+		authedUser = "",
+	} = useSelector((state) => state);
 
 	const sortedUsers = getSortedUsersByQuestionsAnswers(users);
 	const isDataLoading = questions.length === 0 || users.length === 0;
@@ -30,7 +34,7 @@ const LeaderBoard = () => {
 			<div className="relative overflow-x-auto shadow-md sm:rounded-lg">
 				<table className="w-full text-sm text-left text-gray-400">
 					<TableHead columns={TABLE_HEADINGS} />
-					<TableBody users={sortedUsers} />
+					<TableBody users={sortedUsers} authedUser={authedUser} />
 				</table>
 			</div>
 		</div>

@@ -50,7 +50,8 @@
 		@apply rounded-sm p-2 text-center text-gray-100 bg-green-600 hover:bg-green-700 transition-all ease-in font-medium text-sm;
 	}
 
-	button:disabled {
+	button:disabled,
+	input[type="submit"]:disabled {
 		@apply opacity-70 cursor-not-allowed pointer-events-none;
 	}
 }

@@ -6,12 +6,12 @@ import { useInitData } from "./hooks/useInitData";
 import NavRoutes from "./Routes/NavRoutes";
 
 const App = () => {
-	const { initData, clearState } = useInitData();
+	const { initQuestions, clearState } = useInitData();
 	const { authedUser } = useSelector((state) => state);
 	useEffect(() => {
 		if (authedUser) {
 			try {
-				initData();
+				initQuestions();
 			} catch (error) {
 				console.warn(error);
 				alert(
@@ -21,7 +21,7 @@ const App = () => {
 		} else {
 			clearState();
 		}
-	}, [initData, authedUser, clearState]);
+	}, [initQuestions, authedUser, clearState]);
 
 	return (
 		<div className="App">
